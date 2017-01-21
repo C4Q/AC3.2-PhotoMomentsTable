@@ -19,12 +19,6 @@ class PhotoMomentsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         let options = PHFetchOptions()
-//        let sort = NSSortDescriptor(key: "startDate", ascending: false)
-//        options.sortDescriptors = [sort]
-//        let cutoffDate = NSDate(timeIntervalSinceNow: 60 * 60 * 24 * 10 * -1)
-//        let predicate = NSPredicate(format: "startDate > %@", cutoffDate)
-//        options.predicate = predicate
-        
         let momentsLists = PHCollectionList.fetchMomentLists(with: .momentListCluster, options: nil)
         for i in 0..<momentsLists.count {
             print("Title: ", momentsLists[i].localizedTitle ?? "no title")
