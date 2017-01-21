@@ -11,7 +11,7 @@ import Photos
 
 class PhotoMomentsTableViewController: UITableViewController {
     //MARK: - Properties
-    var collectionFetchResult: PHFetchResult<PHCollection>!
+    var collectionFetchResult = PHFetchResult<PHCollection>()
     var fullScreenImage: UIImage!
     
     //MARK: - Methods
@@ -35,7 +35,6 @@ class PhotoMomentsTableViewController: UITableViewController {
 //                }
 //            }
         }
-        print(collectionFetchResult.count)
     }
     
     func printAssetsInList(collection: PHAssetCollection) {
