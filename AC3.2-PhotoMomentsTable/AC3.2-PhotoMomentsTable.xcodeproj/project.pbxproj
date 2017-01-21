@@ -12,6 +12,7 @@
 		47516EF31E33CE700085C867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47516EF21E33CE700085C867 /* Assets.xcassets */; };
 		47516EF61E33CE700085C867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47516EF41E33CE700085C867 /* LaunchScreen.storyboard */; };
 		47516EFE1E33CEB50085C867 /* PhotoMomentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47516EFD1E33CEB50085C867 /* PhotoMomentsTableViewController.swift */; };
+		47516F021E340DE50085C867 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47516F011E340DE50085C867 /* FullScreenImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		47516EF51E33CE700085C867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47516EF71E33CE700085C867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47516EFD1E33CEB50085C867 /* PhotoMomentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMomentsTableViewController.swift; sourceTree = "<group>"; };
+		47516F011E340DE50085C867 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				47516EE81E33CE6F0085C867 /* AppDelegate.swift */,
 				47516EFD1E33CEB50085C867 /* PhotoMomentsTableViewController.swift */,
+				47516F011E340DE50085C867 /* FullScreenImageViewController.swift */,
 				47516EEC1E33CE6F0085C867 /* Main.storyboard */,
 				47516EF21E33CE700085C867 /* Assets.xcassets */,
 				47516EF41E33CE700085C867 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				47516EFE1E33CEB50085C867 /* PhotoMomentsTableViewController.swift in Sources */,
 				47516EE91E33CE6F0085C867 /* AppDelegate.swift in Sources */,
+				47516F021E340DE50085C867 /* FullScreenImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

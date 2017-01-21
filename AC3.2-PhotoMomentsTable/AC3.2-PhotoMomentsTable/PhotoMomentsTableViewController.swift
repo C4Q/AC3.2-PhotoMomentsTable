@@ -12,6 +12,7 @@ import Photos
 class PhotoMomentsTableViewController: UITableViewController {
     //MARK: - Properties
     var collectionFetchResult: PHFetchResult<PHCollection>!
+    var fullScreenImage: UIImage!
     
     //MARK: - Methods
     override func viewDidLoad() {
@@ -57,6 +58,10 @@ class PhotoMomentsTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.collectionFetchResult.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.collectionFetchResult[section].localizedTitle ?? "Unknown location"
     }
     
 
@@ -107,13 +112,20 @@ class PhotoMomentsTableViewController: UITableViewController {
         return cell
     }
 
-    /*
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "photoSegue" {
+            if let dvc = segue.destination as? FullScreenImageViewController,
+                let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+                
+                let collection = self.collectionFetchResult[indexPath.section] as! PHAssetCollection
+                let assets = PHAsset.fetchAssets(in: collection, options: nil)
+                let asset = assets[indexPath.row]
+                
+                dvc.pictureAsset = asset
+            }
+        }
     }
-    */
 
 }
