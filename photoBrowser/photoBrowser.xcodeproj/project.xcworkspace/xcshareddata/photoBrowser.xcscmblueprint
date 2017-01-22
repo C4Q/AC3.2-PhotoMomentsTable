@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "79FAB73247C8E951C4BB5D7D74769CC501ADEBB0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "34C99EC4657D730267A707C2FE7D9CC7F83D83B6" : 9223372036854775807,
+    "79FAB73247C8E951C4BB5D7D74769CC501ADEBB0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9244822A-FF72-4085-906B-7C52EAB99B68",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "34C99EC4657D730267A707C2FE7D9CC7F83D83B6" : "..",
+    "79FAB73247C8E951C4BB5D7D74769CC501ADEBB0" : "photoBrowser\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "photoBrowser",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "photoBrowser.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/defintuition\/Battleship.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34C99EC4657D730267A707C2FE7D9CC7F83D83B6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/defintuition\/photoHW.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79FAB73247C8E951C4BB5D7D74769CC501ADEBB0"
+    }
+  ]
+}
