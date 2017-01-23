@@ -12,7 +12,6 @@ import Photos
 class PhotosTableViewController: UITableViewController {
     
     // MARK: - Properties
-    
     var collectionFetchResult = PHFetchResult<PHCollection>()
 
     override func viewDidLoad() {
@@ -26,17 +25,6 @@ class PhotosTableViewController: UITableViewController {
         options.sortDescriptors = [sort]
         let fetchResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumMyPhotoStream, options: options)
         collectionFetchResult = fetchResult as! PHFetchResult<PHCollection>
-    }
-    
-    func printAssetsInList(collection: PHAssetCollection) {
-        let assets = PHAsset.fetchAssets(in: collection, options: nil)
-        print("\n---\(assets.count)---\n")
-        for j in 0..<assets.count {
-            print(assets[j])
-            if j > 10 {
-                break
-            }
-        }
     }
 
     // MARK: - Table view data source
@@ -55,7 +43,6 @@ class PhotosTableViewController: UITableViewController {
         return assets.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! IndividualPhotoTableViewCell
         let manager = PHImageManager.default()
