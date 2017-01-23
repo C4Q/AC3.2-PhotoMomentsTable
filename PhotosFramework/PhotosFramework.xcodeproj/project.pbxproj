@@ -13,6 +13,8 @@
 		0608466C1E359325007090DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0608466B1E359325007090DE /* Assets.xcassets */; };
 		0608466F1E359325007090DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0608466D1E359325007090DE /* LaunchScreen.storyboard */; };
 		060846771E35B2B2007090DE /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060846761E35B2B2007090DE /* FullImageViewController.swift */; };
+		0608467A1E35BA91007090DE /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060846781E35BA91007090DE /* MyTableViewCell.swift */; };
+		0608467B1E35BA91007090DE /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 060846791E35BA91007090DE /* MyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0608466E1E359325007090DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		060846701E359325007090DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		060846761E35B2B2007090DE /* FullImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
+		060846781E35BA91007090DE /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		060846791E35BA91007090DE /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				060846641E359325007090DE /* AppDelegate.swift */,
 				060846661E359325007090DE /* ViewController.swift */,
+				060846781E35BA91007090DE /* MyTableViewCell.swift */,
+				060846791E35BA91007090DE /* MyTableViewCell.xib */,
 				060846761E35B2B2007090DE /* FullImageViewController.swift */,
 				060846681E359325007090DE /* Main.storyboard */,
 				0608466B1E359325007090DE /* Assets.xcassets */,
@@ -128,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0608466F1E359325007090DE /* LaunchScreen.storyboard in Resources */,
+				0608467B1E35BA91007090DE /* MyTableViewCell.xib in Resources */,
 				0608466C1E359325007090DE /* Assets.xcassets in Resources */,
 				0608466A1E359325007090DE /* Main.storyboard in Resources */,
 			);
@@ -141,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				060846671E359325007090DE /* ViewController.swift in Sources */,
+				0608467A1E35BA91007090DE /* MyTableViewCell.swift in Sources */,
 				060846651E359325007090DE /* AppDelegate.swift in Sources */,
 				060846771E35B2B2007090DE /* FullImageViewController.swift in Sources */,
 			);

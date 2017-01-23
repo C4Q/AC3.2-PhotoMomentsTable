@@ -9,6 +9,8 @@
 import UIKit
 import Photos
 
+let cellIdentifier = "myCustomCell"
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var myTableView: UITableView!
@@ -19,6 +21,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         myTableView.delegate = self
         myTableView.dataSource = self
+        
+        myTableView.register(UINib(nibName: "MyTableViewCell", bundle: nil ) , forCellReuseIdentifier: cellIdentifier)
+        myTableView.rowHeight = UITableViewAutomaticDimension
+        myTableView.estimatedRowHeight = 140
         
         print("\n---Moments List---\n")
         let options = PHFetchOptions()
@@ -55,7 +61,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return assets.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MyTableViewCell
         
         let manager = PHImageManager.default()
         
@@ -66,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let asset = assets[indexPath.row]
         
         if let creationDate = asset.creationDate {
-            cell.textLabel?.text = DateFormatter.localizedString(from: creationDate, dateStyle: .medium, timeStyle: .medium
+            cell.nameLabel.text = DateFormatter.localizedString(from: creationDate, dateStyle: .medium, timeStyle: .medium
             )
         } else {
             cell.textLabel?.text = nil
@@ -76,10 +82,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                     targetSize: CGSize(width: 100.0, height: 100.0),
                                                     contentMode: .aspectFill,
                                                     options: nil) { (result, _) in
-                                                        if let destinationCell = tableView.cellForRow(at: indexPath) {
-                                                            destinationCell.imageView?.image = result
-                                                            
-                                                        }
+                                                        cell.nibImage.image = result
+                                                        cell.setNeedsLayout()
         })
         
         return cell
