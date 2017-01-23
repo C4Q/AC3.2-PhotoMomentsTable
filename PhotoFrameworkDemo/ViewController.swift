@@ -11,11 +11,13 @@ import Photos
 
 class ViewController: UITableViewController {
     
+    // MARK: - Properties
     let reuseIdentifier = "reuseCell"
     
     var collectionFetchResult = PHFetchResult<PHCollection>()
     var assets: [PHAsset] = []
     
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +45,7 @@ class ViewController: UITableViewController {
         }
     }
     
+    // MARK: - Supporting Functions
     func printAssetsInList(collection: PHAssetCollection) {
         let asset = PHAsset.fetchAssets(in: collection, options: nil)
         print("\n---\(asset.count)---\n")
@@ -55,6 +58,7 @@ class ViewController: UITableViewController {
         }
     }
     
+    // MARK: - Table View Stuff
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -112,7 +116,7 @@ class ViewController: UITableViewController {
 }
 
 
-// MARK: - Code for reference
+// MARK: - Unused Code for Reference
 
 /* Within viewDidLoad()
         let fetchResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumMyPhotoStream, options:nil)
