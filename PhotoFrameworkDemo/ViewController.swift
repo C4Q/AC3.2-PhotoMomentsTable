@@ -16,24 +16,21 @@ class ViewController: UITableViewController {
     var collectionFetchResult = PHFetchResult<PHCollection>()
     var assets: [PHAsset] = []
     
-    var setResults = [UIImage]()
-    var setInfo = [[AnyHashable : Any]]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("\n---Moments List---\n")
-//        let options = PHFetchOptions()
-//        let sort = NSSortDescriptor(key: "startDate", ascending: false)
-//        options.sortDescriptors = [sort]
-//        let cutoffDate = NSDate(timeIntervalSinceNow: 60 * 60 * 24 * 10 * -1)
-//        let predicate = NSPredicate(format: "startDate > %@", cutoffDate)
-//        options.predicate = predicate
+                let options = PHFetchOptions()
+//                let sort = NSSortDescriptor(key: "startDate", ascending: false)
+//                options.sortDescriptors = [sort]
+//                let cutoffDate = NSDate(timeIntervalSinceNow: 60 * 60 * 24 * 10 * -1)
+//                let predicate = NSPredicate(format: "startDate > %@", cutoffDate)
+//                options.predicate = predicate
         let momentsLists = PHCollectionList.fetchMomentLists(with: .momentListCluster, options: nil)
         for i in 0..<momentsLists.count {
             print("Title: ", momentsLists[i].localizedTitle ?? "no title")
             let moments = momentsLists[i]
-            let collectionList = PHCollectionList.fetchCollections(in: moments, options: nil)
+            let collectionList = PHCollectionList.fetchCollections(in: moments, options: options)
             
             // for use in a table
             self.collectionFetchResult = collectionList
@@ -46,50 +43,17 @@ class ViewController: UITableViewController {
         }
     }
     
-    //        let fetchResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumMyPhotoStream, options:nil)
-    //
-    //        for i in 0..<fetchResult.count where fetchResult[i].localizedTitle == "Camera Roll"{
-    //            print(fetchResult[i])
-    //            let collection = fetchResult[i]
-    //            print(collection.localizedTitle ?? "")
-    //
-    //            let assets = PHAsset.fetchAssets(in: collection, options: nil)
-    //            print("\n---\(assets.count)---\n")
-    //            for j in 0..<assets.count {
-    //                print(assets[j])
-    //                if j > 10 {
-    //                    break
-    //                }
-    //
-    //                let manager = PHImageManager.default()
-    //                manager.requestImage(for: assets[j],
-    //                                     targetSize: CGSize(width: 200.0, height: 200.0),
-    //                                     contentMode: .aspectFill,
-    //                                     options: nil ) { (result, info) in
-    //
-    //                                        // self.imageView.image = result
-    //                                        if let image = result {
-    //                                            self.setResults.append(image)
-    //                                        }
-    //
-    //                                        if let info = info {
-    //                                            self.setInfo.append(info)
-    //                                        }
-    //                }
-    //            }
-    //        }
-    
-        func printAssetsInList(collection: PHAssetCollection) {
-            let asset = PHAsset.fetchAssets(in: collection, options: nil)
-            print("\n---\(asset.count)---\n")
-            for j in 0..<asset.count {
-                print(asset[j])
-                assets.append(asset[j])
-                if j > 10 {
-                    break
-                }
+    func printAssetsInList(collection: PHAssetCollection) {
+        let asset = PHAsset.fetchAssets(in: collection, options: nil)
+        print("\n---\(asset.count)---\n")
+        for j in 0..<asset.count {
+            print(asset[j])
+            assets.append(asset[j])
+            if j > 10 {
+                break
             }
         }
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -101,6 +65,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Borrowed, as directed, from http://nshipster.com/phimagemanager/
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         
         let manager = PHImageManager.default()
@@ -129,12 +94,60 @@ class ViewController: UITableViewController {
         })
         
         return cell
-        
-        //        cell.imageView?.image = setResults[indexPath.row]
-        //
-        //        return cell
+    }
+    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoSegue" {
+            if let dvc = segue.destination as? DetailViewController,
+                let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+                
+                let asset = assets[indexPath.row]
+                
+                dvc.photo = asset
+            }
+        }
     }
 }
+
+
+// MARK: - Code for reference
+
+/* Within viewDidLoad()
+        let fetchResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumMyPhotoStream, options:nil)
+
+        for i in 0..<fetchResult.count where fetchResult[i].localizedTitle == "Camera Roll"{
+            print(fetchResult[i])
+            let collection = fetchResult[i]
+            print(collection.localizedTitle ?? "")
+
+            let assets = PHAsset.fetchAssets(in: collection, options: nil)
+            print("\n---\(assets.count)---\n")
+            for j in 0..<assets.count {
+                print(assets[j])
+                if j > 10 {
+                    break
+                }
+
+                let manager = PHImageManager.default()
+                manager.requestImage(for: assets[j],
+                                     targetSize: CGSize(width: 200.0, height: 200.0),
+                                     contentMode: .aspectFill,
+                                     options: nil ) { (result, info) in
+
+                                        // self.imageView.image = result
+                                        if let image = result {
+                                            self.setResults.append(image)
+                                        }
+
+                                        if let info = info {
+                                            self.setInfo.append(info)
+                                        }
+                }
+            }
+        }
+*/
 
 //        print("\n---Regular Albums---\n")
 //        fetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options:nil)

@@ -37,6 +37,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E4DB8C91E35D3CF000C6DFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EFAFA1F1E32730D003D14A1 /* AppDelegate.swift */,
+				9EFAFA261E32730D003D14A1 /* Assets.xcassets */,
+				9EFAFA2B1E32730D003D14A1 /* Info.plist */,
+				9EFAFA281E32730D003D14A1 /* LaunchScreen.storyboard */,
+				9EFAFA231E32730D003D14A1 /* Main.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E4DB8CA1E35D3D9000C6DFB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EA176681E35838D00A036CD /* DetailViewController.swift */,
+				9EFAFA211E32730D003D14A1 /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		9EFAFA131E32730D003D14A1 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +77,8 @@
 		9EFAFA1E1E32730D003D14A1 /* PhotoFrameworkDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9EFAFA1F1E32730D003D14A1 /* AppDelegate.swift */,
-				9EFAFA211E32730D003D14A1 /* ViewController.swift */,
-				9EFAFA231E32730D003D14A1 /* Main.storyboard */,
-				9EFAFA261E32730D003D14A1 /* Assets.xcassets */,
-				9EFAFA281E32730D003D14A1 /* LaunchScreen.storyboard */,
-				9EFAFA2B1E32730D003D14A1 /* Info.plist */,
-				9EA176681E35838D00A036CD /* DetailViewController.swift */,
+				9E4DB8C91E35D3CF000C6DFB /* Supporting Files */,
+				9E4DB8CA1E35D3D9000C6DFB /* View Controllers */,
 			);
 			path = PhotoFrameworkDemo;
 			sourceTree = "<group>";

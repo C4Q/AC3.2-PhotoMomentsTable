@@ -7,25 +7,27 @@
 //
 
 import UIKit
+import Photos
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
+    var photo: PHAsset?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        if let selectedPhoto = photo {
+            let manager = PHImageManager.default()
+            
+            manager.requestImage(for: selectedPhoto,
+                                 targetSize: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height),
+                                 contentMode: .aspectFit,
+                                 options: nil) { (image: UIImage?, _) in
+                                    
+                                    self.imageView.image = image
+                                    
+            }
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
