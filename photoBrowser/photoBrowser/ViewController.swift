@@ -31,15 +31,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         photoTable.estimatedRowHeight = 120
         photoTable.sectionHeaderHeight = CGFloat(integerLiteral: 30)
         
-        
-        DispatchQueue.main.async {
-            let momentsLists = PHCollectionList.fetchMomentLists(with: .momentListCluster, options: nil)
-            self.momentsList = momentsLists
-            self.photoTable.reloadData()
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+            DispatchQueue.main.async {
+                let momentsLists = PHCollectionList.fetchMomentLists(with: .momentListCluster, options: nil)
+                self.momentsList = momentsLists
+                self.photoTable.reloadData()
+            }
+        } else {
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                if status == .authorized {
+                    DispatchQueue.main.async {
+                        let momentsLists = PHCollectionList.fetchMomentLists(with: .momentListCluster, options: nil)
+                        self.momentsList = momentsLists
+                        self.photoTable.reloadData()
+                    }
+                }
+            })
         }
+//        DispatchQueue.main.async {
+//            let momentsLists = PHCollectionList.fetchMomentLists(with: .momentListCluster, options: nil)
+//            self.momentsList = momentsLists
+//            self.photoTable.reloadData()
+//        }
+        
+        
         
         
     }
+    
+    
     
     
     // MARK: TableView Delegates
@@ -81,6 +101,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PhotoTableViewCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PhotoTableViewCell
+        
         
         cell.collectionList = momentsList?[indexPath.section]
         let assets = PHCollection.fetchCollections(in: cell.collectionList!, options: nil)
@@ -124,6 +145,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
+    
     
     
     
