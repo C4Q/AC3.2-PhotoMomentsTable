@@ -14,11 +14,13 @@ class PhotosTableViewController: UITableViewController {
     let fullImageSegue = "fullImageSegue"
     
     var collectionFetchResult: PHFetchResult<PHCollection>!
+    var assetsFetchResult: PHFetchResult<PHAsset>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let momentsLists = PHCollectionList.fetchMomentLists(with: .momentListCluster, options: nil)
+        print("Total number of lists of moments: \(momentsLists.count)")
         for i in 0..<momentsLists.count {
             print("Title: ", momentsLists[i].localizedTitle ?? "no title")
             let moments = momentsLists[i]
