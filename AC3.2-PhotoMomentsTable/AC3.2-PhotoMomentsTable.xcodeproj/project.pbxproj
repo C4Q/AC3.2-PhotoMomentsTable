@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE8DCE831E35184B0072999C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DCE821E35184B0072999C /* AppDelegate.swift */; };
+		DE8DCE881E35184C0072999C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8DCE861E35184C0072999C /* Main.storyboard */; };
+		DE8DCE8A1E35184C0072999C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8DCE891E35184C0072999C /* Assets.xcassets */; };
+		DE8DCE8D1E35184C0072999C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8DCE8B1E35184C0072999C /* LaunchScreen.storyboard */; };
+		DE8DCE951E3518A10072999C /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DCE941E3518A10072999C /* PhotosTableViewController.swift */; };
+		DE8DCE971E3519CD0072999C /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DCE961E3519CD0072999C /* FullImageViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DE8DCE7F1E35184B0072999C /* AC3.2-PhotoMomentsTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC3.2-PhotoMomentsTable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8DCE821E35184B0072999C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE8DCE871E35184C0072999C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE8DCE891E35184C0072999C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE8DCE8C1E35184C0072999C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE8DCE8E1E35184C0072999C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8DCE941E3518A10072999C /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
+		DE8DCE961E3519CD0072999C /* FullImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE8DCE7C1E35184B0072999C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE8DCE761E35184B0072999C = {
+			isa = PBXGroup;
+			children = (
+				DE8DCE811E35184B0072999C /* AC3.2-PhotoMomentsTable */,
+				DE8DCE801E35184B0072999C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE8DCE801E35184B0072999C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DCE7F1E35184B0072999C /* AC3.2-PhotoMomentsTable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE8DCE811E35184B0072999C /* AC3.2-PhotoMomentsTable */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DCE821E35184B0072999C /* AppDelegate.swift */,
+				DE8DCE941E3518A10072999C /* PhotosTableViewController.swift */,
+				DE8DCE961E3519CD0072999C /* FullImageViewController.swift */,
+				DE8DCE861E35184C0072999C /* Main.storyboard */,
+				DE8DCE891E35184C0072999C /* Assets.xcassets */,
+				DE8DCE8B1E35184C0072999C /* LaunchScreen.storyboard */,
+				DE8DCE8E1E35184C0072999C /* Info.plist */,
+			);
+			path = "AC3.2-PhotoMomentsTable";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE8DCE7E1E35184B0072999C /* AC3.2-PhotoMomentsTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8DCE911E35184C0072999C /* Build configuration list for PBXNativeTarget "AC3.2-PhotoMomentsTable" */;
+			buildPhases = (
+				DE8DCE7B1E35184B0072999C /* Sources */,
+				DE8DCE7C1E35184B0072999C /* Frameworks */,
+				DE8DCE7D1E35184B0072999C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AC3.2-PhotoMomentsTable";
+			productName = "AC3.2-PhotoMomentsTable";
+			productReference = DE8DCE7F1E35184B0072999C /* AC3.2-PhotoMomentsTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE8DCE771E35184B0072999C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "C4Q-3.2";
+				TargetAttributes = {
+					DE8DCE7E1E35184B0072999C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DE8DCE7A1E35184B0072999C /* Build configuration list for PBXProject "AC3.2-PhotoMomentsTable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE8DCE761E35184B0072999C;
+			productRefGroup = DE8DCE801E35184B0072999C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE8DCE7E1E35184B0072999C /* AC3.2-PhotoMomentsTable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE8DCE7D1E35184B0072999C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8DCE8D1E35184C0072999C /* LaunchScreen.storyboard in Resources */,
+				DE8DCE8A1E35184C0072999C /* Assets.xcassets in Resources */,
+				DE8DCE881E35184C0072999C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE8DCE7B1E35184B0072999C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8DCE951E3518A10072999C /* PhotosTableViewController.swift in Sources */,
+				DE8DCE831E35184B0072999C /* AppDelegate.swift in Sources */,
+				DE8DCE971E3519CD0072999C /* FullImageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DE8DCE861E35184C0072999C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE8DCE871E35184C0072999C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE8DCE8B1E35184C0072999C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE8DCE8C1E35184C0072999C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE8DCE8F1E35184C0072999C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE8DCE901E35184C0072999C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE8DCE921E35184C0072999C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "AC3.2-PhotoMomentsTable/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "c4q.TomSeymour.AC3-2-PhotoMomentsTable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE8DCE931E35184C0072999C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "AC3.2-PhotoMomentsTable/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "c4q.TomSeymour.AC3-2-PhotoMomentsTable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE8DCE7A1E35184B0072999C /* Build configuration list for PBXProject "AC3.2-PhotoMomentsTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8DCE8F1E35184C0072999C /* Debug */,
+				DE8DCE901E35184C0072999C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8DCE911E35184C0072999C /* Build configuration list for PBXNativeTarget "AC3.2-PhotoMomentsTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8DCE921E35184C0072999C /* Debug */,
+				DE8DCE931E35184C0072999C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE8DCE771E35184B0072999C /* Project object */;
+}
